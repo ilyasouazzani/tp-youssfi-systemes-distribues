@@ -11,5 +11,6 @@
     <module>customer-service</module>
     <module>discovery</module>
     <module>ebank-service</module>
+    <module>gateway</module>
   </modules>
 </project>
