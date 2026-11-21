@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: ebank-service
+  cloud:
+    openfeign:
+      client:
+        config:
+          customer-service:
+            connect-timeout: 1000
+            read-timeout: 2000
 eureka:
   instance:
     hostname: localhost
