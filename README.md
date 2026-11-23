@@ -21,3 +21,7 @@ La partie agent Spring AI, le transport MCP, les clients Telegram et Discord et 
 Source : https://spring.io/projects/spring-cloud/
 
 
+
+## Scénario de vérification
+
+Avec les quatre services démarrés, lancer `pwsh -File verifier-api.ps1`. Pour observer le mode dégradé, arrêter Customer-Service et appeler à nouveau la route des comptes. Après redémarrage, vérifier que le client est retrouvé.
