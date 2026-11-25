@@ -1,0 +1,14 @@
+server:
+  address: 127.0.0.1
+  port: 8084
+spring:
+  application:
+    name: bank-mcp
+  ai:
+    mcp:
+      server:
+        name: bank-demo
+        protocol: STREAMABLE
+        type: SYNC
+bank:
+  gateway-url: ${BANK_GATEWAY_URL:http://127.0.0.1:8080}

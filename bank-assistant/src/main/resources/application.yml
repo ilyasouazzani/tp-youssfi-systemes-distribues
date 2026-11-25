@@ -1,0 +1,22 @@
+server:
+  address: 127.0.0.1
+  port: 8085
+spring:
+  application:
+    name: bank-assistant
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: ${BANK_MODEL_BASE_URL:https://api.openai.com}
+      chat:
+        options:
+          model: ${BANK_MODEL:gpt-4o-mini}
+    mcp:
+      client:
+        type: SYNC
+        request-timeout: 10s
+        streamable-http:
+          connections:
+            bank:
+              url: ${BANK_MCP_URL:http://127.0.0.1:8084}
+              endpoint: /mcp
